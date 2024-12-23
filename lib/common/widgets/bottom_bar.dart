@@ -65,7 +65,7 @@ class _BottomBarState extends State<BottomBar> {
                               ? GlobalVariables.selectedNavBarColor
                               : GlobalVariables.unselectedNavBarColor,
                           width: bottomBarBorderWidth))),
-              child: const Icon(Icons.home_outlined),
+              child: const Icon(Icons.person_outline_outlined),
             ),
             label: '',
           ),
