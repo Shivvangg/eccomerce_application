@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'common/widgets/bottom_bar.dart';
 import 'features/admin/screens/add_product_screen.dart';
+import 'features/home/screens/category_deals_screen.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {
@@ -26,6 +27,14 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
       return MaterialPageRoute(
         settings: routeSettings,
         builder: (_) => BottomBar(),
+      );
+    case CategoryDealsScreen.routeName:
+      var category = routeSettings.arguments as String;
+      return MaterialPageRoute(
+        settings: routeSettings,
+        builder: (_) => CategoryDealsScreen(
+          category: category,
+        ),
       );
     default:
       return MaterialPageRoute(
